@@ -1,27 +1,40 @@
 import { Container } from '@mui/material'
-import  { makeStyles } from '@mui/styles'
+import { styled } from '@mui/material/styles'
 
 
-const useStyles = makeStyles({
-    intro: {
+const IntroDiv = styled('div')(({theme}) => ({
+    [theme.breakpoints.down('xl')]: {
         width: "100%",
         height: "90vh",
         backgroundImage: "url(tufcat.jpg)",
-        backgroundSize: "contain",
+        backgroundSize: "100% 100%",
         backgroundRepeat: "no-repeat",
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+    },
+    [theme.breakpoints.down('lg')]: {
+        backgroundSize: "100% 100%",
+        height: "75vh"
+    },
+    [theme.breakpoints.down('md')]: {
+        backgroundSize: "contain",
+        height: "55vh"
+    },
+    [theme.breakpoints.down('sm')]: {
+        backgroundSize: "100% 100%",
+        height: "30vh"
     }
-})
+}))
+
 
 export default function Intro(){
-    const classes = useStyles()
 
     return(
         <>
             <Container maxWidth="xl">
-                <div className={classes.intro}></div>
+                {/*<div className={classes.intro}></div>*/}
+                <IntroDiv />
             </Container>
         </>
     )
