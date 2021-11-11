@@ -4,9 +4,11 @@ import  { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
     intro: {
+        width: "100%",
         height: "90vh",
-        background: "url(tufcat.jpg)",
-        backgroundSize: "cover",
+        backgroundImage: "url(tufcat.jpg)",
+        backgroundSize: "contain",
+        backgroundRepeat: "no-repeat",
         display: "flex",
         justifyContent: "center",
         alignItems: "center"
