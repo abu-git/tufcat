@@ -8,7 +8,7 @@ const useStyles = makeStyles({
         display: "flex",
         justifyContent: "space-around",
         padding: "1em 0",
-        background: "#fab246"
+        background: "#f59e1b"
     }
 })
 
