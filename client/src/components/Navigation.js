@@ -8,8 +8,12 @@ const useStyles = makeStyles({
         display: "flex",
         justifyContent: "space-around",
         padding: "1em 0",
-        background: "#f59e1b",
+        background: "#ff8400",
         height: "25px"
+    },
+    link: {
+        textDecoration: "none",
+        color: "black"
     }
 })
 
@@ -18,10 +22,10 @@ export default function Navigation(){
     return(
         <>
             <nav className={classes.nav}>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Admin Login</a>
+                <a className={classes.link} href="#">Home</a>
+                <a className={classes.link} href="#">About</a>
+                <a className={classes.link} href="#">Contact</a>
+                <a className={classes.link} href="#">Admin Login</a>
             </nav>
         </>
     )
