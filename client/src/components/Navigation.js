@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+
 import  { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles({
@@ -8,7 +8,8 @@ const useStyles = makeStyles({
         display: "flex",
         justifyContent: "space-around",
         padding: "1em 0",
-        background: "#f59e1b"
+        background: "#f59e1b",
+        height: "25px"
     }
 })
 
@@ -16,14 +17,12 @@ export default function Navigation(){
     const classes = useStyles()
     return(
         <>
-            <Container maxWidth="xl">
-                <nav className={classes.nav}>
-                    <a href="#">Home</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
-                    <a href="#">Admin Login</a>
-                </nav>
-            </Container>
+            <nav className={classes.nav}>
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Admin Login</a>
+            </nav>
         </>
     )
 }

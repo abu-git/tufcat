@@ -1,4 +1,3 @@
-import { Container } from '@mui/material'
 import { styled } from '@mui/material/styles'
 
 
@@ -32,10 +31,9 @@ export default function Intro(){
 
     return(
         <>
-            <Container maxWidth="xl">
                 {/*<div className={classes.intro}></div>*/}
-                <IntroDiv />
-            </Container>
+            <IntroDiv />
+            
         </>
     )
 }
