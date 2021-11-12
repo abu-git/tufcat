@@ -1,5 +1,6 @@
 import Intro from "./Intro"
 import Navigation from "./Navigation"
+import BookShelf from "./BookShelf"
 
 
 export default function HomePage(){
@@ -8,6 +9,7 @@ export default function HomePage(){
         <>
             <Intro />
             <Navigation />
+            <BookShelf />
         </>
     )
 }
