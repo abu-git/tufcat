@@ -25,7 +25,7 @@ export default function Navigation(){
                 <a className={classes.link} href="#">Home</a>
                 <a className={classes.link} href="#">About</a>
                 <a className={classes.link} href="#">Contact</a>
-                <a className={classes.link} href="#">Admin Login</a>
+                {/*<a className={classes.link} href="#">Admin Login</a>*/}
             </nav>
         </>
     )
