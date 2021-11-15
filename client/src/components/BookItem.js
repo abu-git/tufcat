@@ -32,22 +32,32 @@ const useStyles = makeStyles({
     available: {
         fontSize: "12px",
         color: "green"
+    },
+    notavailable: {
+        fontSize: "12px",
+        color: "red"
     }
 })
 
-export default function BookItem(){
+export default function BookItem({book}){
     const classes = useStyles()
     return(
         <>
             <div className={classes.book}>
                 <div className={classes.cover}>
-                    <img className={classes.img} src="https://s-media-cache-ak0.pinimg.com/564x/f9/8e/2d/f98e2d661445620266c0855d418aab71.jpg"/>
+                    <img className={classes.img} src={book.image}/>
                 </div>
                 <div className={classes.description}>
-                    <p className={classes.title}>Frankenstein<br></br>
-                    <span className={classes.author}>Mary Shelley</span><br></br>
-                    <span className={classes.price}>R25.00</span><br></br>
-                    <span className={classes.available}>Available</span></p>
+                    <p className={classes.title}>{book.title}<br></br>
+                    <span className={classes.author}>{book.author}</span><br></br>
+                    <span className={classes.price}>{book.price}</span><br></br>
+                    {book.available === true &&
+                    <span className={classes.available}>Available</span>
+                    }
+                    {book.available === false &&
+                    <span className={classes.notavailable}>Not Available</span>
+                    }
+                    </p>
                 </div>
             </div>
         </>
