@@ -2,6 +2,16 @@ import { styled } from '@mui/material/styles'
 
 
 const IntroDiv = styled('div')(({theme}) => ({
+    [theme.breakpoints.up('xl')]: {
+        width: "100%",
+        height: "90vh",
+        backgroundImage: "url(tufcat.jpg)",
+        backgroundSize: "100% 100%",
+        backgroundRepeat: "no-repeat",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+    },
     [theme.breakpoints.down('xl')]: {
         width: "100%",
         height: "90vh",
